@@ -13,7 +13,10 @@ import {
     EventListResolver,
     CreateSessionComponent,
     SessionListComponent,
-    DurationPipe
+    DurationPipe,
+    UpvoteComponent,
+    VoterService,
+    LocationValidator
 } from './events/index';
 
 import { 
@@ -54,12 +57,15 @@ declare let jQuery: Object;
         CollapsibleWellComponent,
         DurationPipe,
         SimpleModalComponent,
-        ModalTriggerDirective
+        ModalTriggerDirective,
+        UpvoteComponent,
+        LocationValidator
     ],
     providers: [
         EventService,
         EventRouteActivator,
         EventListResolver,
+        VoterService,
         AuthService,
         {
             provide: 'canDeactivateCreatEvent', 
